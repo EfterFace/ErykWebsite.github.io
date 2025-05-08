@@ -127,11 +127,20 @@
             margin: 0 auto 2rem;
         }
         
-        .video-placeholder {
+        .video-container video {
             width: 100%;
             height: auto;
             border-radius: 8px;
             display: block;
+            cursor: pointer;
+        }
+        
+        .video-thumbnail {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            cursor: pointer;
         }
         
         .play-button {
@@ -150,6 +159,7 @@
             font-size: 1.8rem;
             cursor: pointer;
             transition: all 0.3s ease;
+            pointer-events: none; /* Allows clicks to pass through to the video element */
         }
         
         .play-button:hover {
@@ -202,6 +212,32 @@
             }
         }
     </style>
+    <script>
+        // Script to handle video play functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoContainers = document.querySelectorAll('.video-container');
+            
+            videoContainers.forEach(container => {
+                const video = container.querySelector('video');
+                
+                if (video) {
+                    video.addEventListener('click', function() {
+                        if (video.paused) {
+                            video.play();
+                            container.querySelector('.play-button').style.opacity = '0';
+                        } else {
+                            video.pause();
+                            container.querySelector('.play-button').style.opacity = '1';
+                        }
+                    });
+                    
+                    video.addEventListener('ended', function() {
+                        container.querySelector('.play-button').style.opacity = '1';
+                    });
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -233,7 +269,10 @@
         <div class="projects-list">
             <div class="project-item">
                 <div class="video-container">
-                    <img src="1.mp4" alt="Project 1 Video" class="video-placeholder">
+                    <video poster="/api/placeholder/600/350" controls>
+                        <source src="1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class="play-button">▶</div>
                 </div>
                 <div class="project-content">
@@ -250,7 +289,10 @@
             
             <div class="project-item">
                 <div class="video-container">
-                    <img src="/api/placeholder/600/350" alt="Project 2 Video" class="video-placeholder">
+                    <video poster="/api/placeholder/600/350" controls>
+                        <source src="videos/project2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class="play-button">▶</div>
                 </div>
                 <div class="project-content">
@@ -267,7 +309,10 @@
             
             <div class="project-item">
                 <div class="video-container">
-                    <img src="/api/placeholder/600/350" alt="Project 3 Video" class="video-placeholder">
+                    <video poster="/api/placeholder/600/350" controls>
+                        <source src="videos/project3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class="play-button">▶</div>
                 </div>
                 <div class="project-content">
@@ -284,7 +329,10 @@
             
             <div class="project-item">
                 <div class="video-container">
-                    <img src="/api/placeholder/600/350" alt="Project 4 Video" class="video-placeholder">
+                    <video poster="/api/placeholder/600/350" controls>
+                        <source src="videos/project4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class="play-button">▶</div>
                 </div>
                 <div class="project-content">
@@ -301,7 +349,10 @@
             
             <div class="project-item">
                 <div class="video-container">
-                    <img src="/api/placeholder/600/350" alt="Project 5 Video" class="video-placeholder">
+                    <video poster="/api/placeholder/600/350" controls>
+                        <source src="videos/project5.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class="play-button">▶</div>
                 </div>
                 <div class="project-content">
@@ -318,7 +369,10 @@
             
             <div class="project-item">
                 <div class="video-container">
-                    <img src="/api/placeholder/600/350" alt="Project 6 Video" class="video-placeholder">
+                    <video poster="/api/placeholder/600/350" controls>
+                        <source src="videos/project6.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class="play-button">▶</div>
                 </div>
                 <div class="project-content">
