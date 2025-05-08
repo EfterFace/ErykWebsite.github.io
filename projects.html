@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My GitHub.io Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #f0f0f0;
+            text-decoration: underline;
+        }
+        
+        .page-title {
+            background-color: #f9f9f9;
+            padding: 2rem 0;
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 2rem;
+        }
+        
+        .page-title h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .project-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .project-intro p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .projects-list {
+            margin-bottom: 4rem;
+        }
+        
+        .project-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        
+        .project-description {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: rgba(118, 75, 162, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .play-button:hover {
+            background-color: rgba(102, 126, 234, 0.9);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-tag {
+            background-color: #eaecef;
+            color: #555;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        .project-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-link:hover {
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            nav ul li {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Your Name</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="page-title">
+        <div class="container">
+            <h1>My Projects</h1>
+        </div>
+    </section>
+    
+    <main class="container">
+        <div class="project-intro">
+            <p>Here are some of my recent projects showcasing my skills and experience. Each project includes a video demonstration and description.</p>
+        </div>
+        
+        <div class="projects-list">
+            <div class="project-item">
+                <div class="video-container">
+                    <img src="/api/placeholder/600/350" alt="Project 1 Video" class="video-placeholder">
+                    <div class="play-button">▶</div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Project 1: Website Redesign</h2>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML5</span>
+                        <span class="project-tag">CSS3</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <p class="project-description">A complete redesign of a client's e-commerce website focused on improving user experience and conversion rates. The project involved creating a responsive design, optimizing for mobile, and implementing modern UI/UX principles.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="video-container">
+                    <img src="/api/placeholder/600/350" alt="Project 2 Video" class="video-placeholder">
+                    <div class="play-button">▶</div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Project 2: Mobile App Development</h2>
+                    <div class="project-tags">
+                        <span class="project-tag">React Native</span>
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag">API Integration</span>
+                    </div>
+                    <p class="project-description">A fitness tracking mobile application that helps users monitor their workouts, set goals, and track progress. Features include custom workout plans, progress analytics, and social sharing capabilities.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="video-container">
+                    <img src="/api/placeholder/600/350" alt="Project 3 Video" class="video-placeholder">
+                    <div class="play-button">▶</div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Project 3: Data Visualization Dashboard</h2>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">D3.js</span>
+                        <span class="project-tag">Node.js</span>
+                    </div>
+                    <p class="project-description">An interactive dashboard for visualizing complex data sets, allowing users to filter, sort, and analyze information through intuitive charts and graphs. Implemented real-time updates and export functionality.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="video-container">
+                    <img src="/api/placeholder/600/350" alt="Project 4 Video" class="video-placeholder">
+                    <div class="play-button">▶</div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Project 4: E-Learning Platform</h2>
+                    <div class="project-tags">
+                        <span class="project-tag">Vue.js</span>
+                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">Express</span>
+                    </div>
+                    <p class="project-description">A comprehensive e-learning platform featuring course creation tools, student progress tracking, and integrated assessment capabilities. Designed with accessibility in mind and optimized for all devices.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="video-container">
+                    <img src="/api/placeholder/600/350" alt="Project 5 Video" class="video-placeholder">
+                    <div class="play-button">▶</div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Project 5: AI-powered Chatbot</h2>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">TensorFlow</span>
+                        <span class="project-tag">NLP</span>
+                    </div>
+                    <p class="project-description">Developed an intelligent chatbot for customer service automation. The system uses natural language processing to understand customer queries and provide accurate responses, with a learning mechanism to improve over time.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="video-container">
+                    <img src="/api/placeholder/600/350" alt="Project 6 Video" class="video-placeholder">
+                    <div class="play-button">▶</div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Project 6: Portfolio Website Template</h2>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML5</span>
+                        <span class="project-tag">CSS3</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <p class="project-description">A customizable portfolio website template designed for creative professionals. Features include a responsive layout, animated transitions, dark/light mode, and easy content management without coding knowledge.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

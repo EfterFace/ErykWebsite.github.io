@@ -82,6 +82,136 @@
             color: #666;
         }
         
+        .image-section {
+            padding: 3rem 0;
+        }
+        
+        .image-section h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .image-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .image-container {
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-link {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            display: block;
+        }
+        
+        .image-caption {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .content-grid {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .content-grid h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .grid-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .grid-item h4 {
+            font-size: 1.2rem;
+            margin: 1rem;
+            color: #444;
+        }
+        
+        .grid-item p {
+            margin: 0 1rem 1rem;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(118, 75, 162, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .play-button:hover {
+            background-color: rgba(102, 126, 234, 0.9);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -95,6 +225,14 @@
             nav ul li {
                 margin: 0 0.5rem;
             }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -105,10 +243,9 @@
                 <div class="logo">Your Name</div>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -117,13 +254,32 @@
     
     <section class="hero">
         <div class="container">
-            <h1>Welcome to My GitHub.io Page</h1>
-            <p>This is a simple one-page website with a nice header that you can use as a starting point for your GitHub Pages site.</p>
+            <h1>John Doe</h1>
+            <p>Web developer passionate about creating beautiful and functional websites.</p>
         </div>
     </section>
     
     <main class="container">
-        <!-- Your content goes here -->
+        <div class="image-section">
+            <h2>My Portfolio</h2>
+            <p>Check out some of my recent work below:</p>
+            
+            <div class="portfolio-grid">
+                <div class="image-container">
+                    <a href="projects.html" class="image-link">
+                        <img src="/api/placeholder/400/300" alt="My Video Projects" class="portfolio-image">
+                        <div class="image-caption">View Video Projects</div>
+                    </a>
+                </div>
+                
+                <div class="image-container">
+                    <a href="photography.html" class="image-link">
+                        <img src="/api/placeholder/400/300" alt="My Photography" class="portfolio-image">
+                        <div class="image-caption">View Photography Work</div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
