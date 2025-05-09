@@ -98,15 +98,17 @@
             color: #666;
         }
         
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+        .portfolio-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 3rem;
         }
         
         .image-container {
             margin-bottom: 2rem;
             transition: transform 0.3s ease;
+            max-width: 600px;
         }
         
         .image-container:hover {
@@ -121,95 +123,40 @@
         
         .portfolio-image {
             width: 100%;
-            max-width: 400px;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
             display: block;
         }
         
         .image-caption {
             margin-top: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             font-weight: 500;
             color: #555;
+            text-align: center;
         }
         
-        .content-grid {
-            margin-top: 3rem;
-            margin-bottom: 3rem;
+        .button-container {
+            text-align: center;
+            margin-top: 2rem;
         }
         
-        .content-grid h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: #333;
-        }
-        
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-        
-        .grid-item {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        
-        .grid-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-        
-        .grid-item h4 {
-            font-size: 1.2rem;
-            margin: 1rem;
-            color: #444;
-        }
-        
-        .grid-item p {
-            margin: 0 1rem 1rem;
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
-        .video-container {
-            position: relative;
-            width: 100%;
-            margin-top: 1rem;
-        }
-        
-        .video-placeholder {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            background-color: rgba(118, 75, 162, 0.8);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
             transition: all 0.3s ease;
+            font-size: 1.1rem;
         }
         
-        .play-button:hover {
-            background-color: rgba(102, 126, 234, 0.9);
-            transform: translate(-50%, -50%) scale(1.1);
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         @media (max-width: 768px) {
@@ -224,14 +171,6 @@
             
             nav ul li {
                 margin: 0 0.5rem;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .grid-container {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -255,30 +194,27 @@
     <section class="hero">
         <div class="container">
             <h1>Eryk Wawrzenczyk</h1>
-            <p>Hi, I am Eryk, and this is my portfolio showing my skill in programming and scripting.</p>
-            <p>On this page you can find out my past projects and achievemnts when it comes to utilizing Unreal Engine and Unity</p>
+            <p>Hi, I am Eryk, and this is my portfolio showcasing my skills in game development and programming.</p>
+            <p>Explore my projects and achievements in Unreal Engine development.</p>
         </div>
     </section>
     
     <main class="container">
         <div class="image-section">
-            <h2>Projects</h2>
-            <p>Check out some of my work below:</p>
+            <h2>Unreal Engine Projects</h2>
+            <p>Check out my work with Unreal Engine:</p>
             
-            <div class="portfolio-grid">
+            <div class="portfolio-showcase">
                 <div class="image-container">
                     <a href="projects.html" class="image-link">
                         <img src="Ue5Image.png" alt="My Unreal Engine Projects" class="portfolio-image">
-                        <div class="image-caption">Unreal Engine</div>
+                        <div class="image-caption">Unreal Engine Portfolio</div>
                     </a>
                 </div>
-                
-                <div class="image-container">
-                    <a href="photography.html" class="image-link">
-                        <img src="UnityImage.png" alt="My Unity Projects" class="portfolio-image">
-                        <div class="image-caption">Unity</div>
-                    </a>
-                </div>
+            </div>
+            
+            <div class="button-container">
+                <a href="projects.html" class="cta-button">View All Projects</a>
             </div>
         </div>
     </main>
